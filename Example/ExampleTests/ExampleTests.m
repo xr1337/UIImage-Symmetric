@@ -6,27 +6,26 @@
 //  Copyright (c) 2013 Sufiyan Yasa. All rights reserved.
 //
 
-#import "ExampleTests.h"
+
+#import <SenTestingKit/SenTestingKit.h>
+#import "UIImage+Symmetric.h"
+
+@interface ExampleTests : SenTestCase
+
+@end
+
 
 @implementation ExampleTests
 
-- (void)setUp
+- (void)testImageSize
 {
-    [super setUp];
+    UIImage *halfImage = [ UIImage imageNamed:@"half.png"];
+    CGSize halfImageSize = halfImage.size;
     
-    // Set-up code here.
-}
-
-- (void)tearDown
-{
-    // Tear-down code here.
+    UIImage *fullImage = [UIImage symmetricImageNamed:@"half.png"];
+    STAssertTrue(fullImage.size.width == halfImageSize.width*2, @"Failed to double the width");
+    STAssertTrue(fullImage.size.height == halfImageSize.height, @"Height should not have changed");
     
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in ExampleTests");
 }
 
 @end

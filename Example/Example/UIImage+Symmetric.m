@@ -25,7 +25,7 @@ static void destroy_image_cache() {
 }
 
 
-+(id)symmetricImageNamed:(NSString*)fileName{
++(id)symmetricImageNamed:(NSString*)fileName horizontalSplit:(BOOL)isHorizontal{
     if (!imageCache) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
@@ -38,10 +38,19 @@ static void destroy_image_cache() {
     //2. cache missed, create the image again.
     if (!newImage) {
         UIImage *image = [UIImage imageNamed:fileName];
+        
+        CGSize newSize = CGSizeMake(image.size.width*2, image.size.height);
+        CGPoint otherPoint = CGPointMake(image.size.width, 0);
+        if (isHorizontal) {
+            newSize = CGSizeMake(image.size.width, image.size.height*2);
+            otherPoint =CGPointMake(0, image.size.height);
+        }
+        
         UIImage *flippedImage =[UIImage imageWithCGImage:image.CGImage scale:1.0 orientation: UIImageOrientationUpMirrored];
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(image.size.width*2, image.size.height), NO, [UIScreen mainScreen].scale);
-        [image drawAtPoint:CGPointZero ];
-        [flippedImage drawAtPoint:CGPointMake(image.size.width, 0)];
+        
+        UIGraphicsBeginImageContextWithOptions(newSize, NO, [UIScreen mainScreen].scale);
+        [image drawAtPoint:CGPointMake(0, 0) ];
+        [flippedImage drawAtPoint:otherPoint];
         newImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         [imageCache setObject:newImage forKey:fileName];
