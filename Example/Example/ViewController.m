@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIImage+Symmetric.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.horizontalSplitImageView.image = [UIImage symmetricImageNamed:@"sym_half.png" horizontalSplit:NO];
+    self.verticalSplitImageView.image = [UIImage symmetricImageNamed:@"stop_half.png" horizontalSplit:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

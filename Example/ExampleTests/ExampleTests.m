@@ -17,15 +17,26 @@
 
 @implementation ExampleTests
 
-- (void)testImageSize
+- (void)testImageVerticalSlice
 {
-    UIImage *halfImage = [ UIImage imageNamed:@"half.png"];
+    UIImage *halfImage = [ UIImage imageNamed:@"sym_half.png"];
     CGSize halfImageSize = halfImage.size;
     
-    UIImage *fullImage = [UIImage symmetricImageNamed:@"half.png"];
+    UIImage *fullImage = [UIImage symmetricImageNamed:@"sym_half.png" horizontalSplit:NO];
     STAssertTrue(fullImage.size.width == halfImageSize.width*2, @"Failed to double the width");
     STAssertTrue(fullImage.size.height == halfImageSize.height, @"Height should not have changed");
     
 }
 
+
+- (void)testImageHorizontalSlice
+{
+    UIImage *halfImage = [ UIImage imageNamed:@"stop_half.png"];
+    CGSize halfImageSize = halfImage.size;
+    
+    UIImage *fullImage = [UIImage symmetricImageNamed:@"stop_half.png" horizontalSplit:YES];
+    STAssertTrue(fullImage.size.width == halfImageSize.width, @"Width should not have changed.");
+    STAssertTrue(fullImage.size.height == halfImageSize.height*2, @"Failed to double the Height ");
+    
+}
 @end

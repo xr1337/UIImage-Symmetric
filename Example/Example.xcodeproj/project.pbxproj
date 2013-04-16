@@ -25,10 +25,8 @@
 		4236F68F171ADF74001B0C4D /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4236F68E171ADF74001B0C4D /* ExampleTests.m */; };
 		4236F69B171ADFE1001B0C4D /* UIImage+Symmetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 4236F69A171ADFE1001B0C4D /* UIImage+Symmetric.m */; };
 		4236F69C171ADFE1001B0C4D /* UIImage+Symmetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 4236F69A171ADFE1001B0C4D /* UIImage+Symmetric.m */; };
-		4236F69E171ADFFC001B0C4D /* half.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236F69D171ADFFC001B0C4D /* half.png */; };
-		4236F69F171ADFFC001B0C4D /* half.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236F69D171ADFFC001B0C4D /* half.png */; };
-		4236F6A1171AE00F001B0C4D /* full.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236F6A0171AE00F001B0C4D /* full.png */; };
-		4236F6A2171AE00F001B0C4D /* full.png in Resources */ = {isa = PBXBuildFile; fileRef = 4236F6A0171AE00F001B0C4D /* full.png */; };
+		C08EF00C171D44F8003E4BDD /* sym_half.png in Resources */ = {isa = PBXBuildFile; fileRef = C08EF00B171D44F8003E4BDD /* sym_half.png */; };
+		C08EF00E171D47F4003E4BDD /* stop_half.png in Resources */ = {isa = PBXBuildFile; fileRef = C08EF00D171D47F4003E4BDD /* stop_half.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +63,8 @@
 		4236F68E171ADF74001B0C4D /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
 		4236F699171ADFE1001B0C4D /* UIImage+Symmetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Symmetric.h"; sourceTree = "<group>"; };
 		4236F69A171ADFE1001B0C4D /* UIImage+Symmetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Symmetric.m"; sourceTree = "<group>"; };
-		4236F69D171ADFFC001B0C4D /* half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = half.png; sourceTree = "<group>"; };
-		4236F6A0171AE00F001B0C4D /* full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full.png; sourceTree = "<group>"; };
+		C08EF00B171D44F8003E4BDD /* sym_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sym_half.png; sourceTree = "<group>"; };
+		C08EF00D171D47F4003E4BDD /* stop_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_half.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +129,8 @@
 				4236F675171ADF74001B0C4D /* ViewController.h */,
 				4236F676171ADF74001B0C4D /* ViewController.m */,
 				4236F678171ADF74001B0C4D /* ViewController.xib */,
-				4236F6A0171AE00F001B0C4D /* full.png */,
-				4236F69D171ADFFC001B0C4D /* half.png */,
+				C08EF00D171D47F4003E4BDD /* stop_half.png */,
+				C08EF00B171D44F8003E4BDD /* sym_half.png */,
 				4236F698171ADFD0001B0C4D /* Category */,
 				4236F664171ADF74001B0C4D /* Supporting Files */,
 			);
@@ -256,8 +254,8 @@
 				4236F672171ADF74001B0C4D /* Default@2x.png in Resources */,
 				4236F674171ADF74001B0C4D /* Default-568h@2x.png in Resources */,
 				4236F67A171ADF74001B0C4D /* ViewController.xib in Resources */,
-				4236F69E171ADFFC001B0C4D /* half.png in Resources */,
-				4236F6A1171AE00F001B0C4D /* full.png in Resources */,
+				C08EF00C171D44F8003E4BDD /* sym_half.png in Resources */,
+				C08EF00E171D47F4003E4BDD /* stop_half.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +264,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4236F68C171ADF74001B0C4D /* InfoPlist.strings in Resources */,
-				4236F69F171ADFFC001B0C4D /* half.png in Resources */,
-				4236F6A2171AE00F001B0C4D /* full.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +475,7 @@
 				4236F694171ADF74001B0C4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4236F695171ADF74001B0C4D /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +484,7 @@
 				4236F697171ADF74001B0C4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
