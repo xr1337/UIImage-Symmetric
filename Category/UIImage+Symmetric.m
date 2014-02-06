@@ -24,7 +24,7 @@ static void destroy_image_cache() {
     [imageCache removeAllObjects];
 }
 
-+(id)symmetricImageNamed:(NSString*)fileName horizontalSplit:(BOOL)isHorizontal{
++(id)symmetricImageNamed:(NSString*)fileName horizontalSplit:(BOOL)isHorizontal {
     if (!imageCache) {
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
